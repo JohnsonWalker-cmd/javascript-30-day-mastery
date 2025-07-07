@@ -20,3 +20,13 @@ function youGo(){
 }
 
 quizEngine("What is your favorite color?" , youGo);
+/* 
+🧠 Outcome:
+You now understand how:
+
+Functions can be passed as values (callbacks)
+
+Lexical scope allows access to parent variables
+
+setTimeout() enables asynchronous patterns in JavaScript
+*/
