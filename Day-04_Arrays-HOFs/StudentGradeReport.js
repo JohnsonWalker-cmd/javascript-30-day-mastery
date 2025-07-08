@@ -13,7 +13,7 @@ function processGrades(students){
 
   const boosted = students.map(student => ({
       name : student.name ,
-      score:Math.min(student.score + 5 , 100)
+      score: Math.min(student.score + 5 , 100)
   }));
 
   const passed = students.filter(student => student.score >= 60);
