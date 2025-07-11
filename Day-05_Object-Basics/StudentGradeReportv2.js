@@ -43,12 +43,13 @@ function generateReport(){
      
     
   return {
-      averageScore,
-      topStudent,
-      bottomStudent,
-      passed,
-      boost
-    };
+    averageScore,
+    topStudent,
+    bottomStudent,
+    passed,
+    boost
+  };
+  
 }
 
 const report = generateReport();
