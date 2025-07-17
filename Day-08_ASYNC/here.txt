@@ -1,0 +1,37 @@
+🍔 Mini Challenge: Fast Food Order Flow
+📝 Scenario:
+You're simulating the process of ordering a burger from a fast-food place.
+It involves 3 steps:
+
+Place order – takes 1 second
+
+Cook burger – takes 2 seconds
+
+Serve burger – takes 1.5 seconds
+
+🎯 Your Challenge:
+Write three functions using Promises:
+
+placeOrder()
+
+cookBurger(orderMsg)
+
+serveBurger(cookMsg)
+
+Then write an async function startBurgerOrder() that:
+
+Awaits each step
+
+Handles any possible errors using try...catch
+
+Logs the final result
+
+🔧 Example Output:
+vbnet
+Copy
+Edit
+Burger served 🍔 - based on: Cooking burger 👨‍🍳 - based on: Order placed 📝
+🧠 Tips:
+Each function should return a Promise with a setTimeout to simulate delay
+
+Pass messages between functions like we did in the pizza example
