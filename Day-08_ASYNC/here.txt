@@ -35,3 +35,56 @@ Burger served 🍔 - based on: Cooking burger 👨‍🍳 - based on: Order plac
 Each function should return a Promise with a setTimeout to simulate delay
 
 Pass messages between functions like we did in the pizza example
+
+
+
+🧠 Challenge: Burger & Fries Combo
+Goal: Simulate ordering a burger and fries at the same time, then serve both once they’re ready.
+
+🛠️ What to Build
+placeOrder() – same as before
+
+cookBurger() – same
+
+fryFries() – NEW function that simulates frying fries
+
+serveCombo() – takes both burger and fries messages and returns a final message
+
+🧪 Hint: Use Promise.all()
+This will let you cook the burger and fry the fries at the same time, and wait for both to finish before serving.
+
+✅ Example Output:
+vbnet
+Copy
+Edit
+🍟🍔 Combo ready:
+Burger underway based on Order placed
+Fries done based on Order placed
+🔧 Starter Code (Just Build the 3 New Functions):
+js
+Copy
+Edit
+function fryFries(orderMsg){
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`Fries done based on ${orderMsg}`);
+    }, 1800);
+  });
+}
+
+function serveCombo([burgerMsg, friesMsg]){
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(`🍟🍔 Combo ready:\n${burgerMsg}\n${friesMsg}`);
+    }, 1000);
+  });
+}
+Now modify startBurgerOrder() to:
+
+Place the order
+
+Run cookBurger() and fryFries() in parallel using Promise.all
+
+Then call serveCombo()
+
+Let’s go! Try it out and send it over when done 🚀
