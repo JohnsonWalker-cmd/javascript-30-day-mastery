@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A simple modal Popup</title>
+  <link rel="stylesheet" href="./modal.css">
+</head>
+<body>
+
+
+  <!--A button to open the modal-->
+  <button id="openModal">Show Modal</button>
+
+  <!-- add an overlay, followed by the modal. The overlay should contain the modal-->
+  <div class="modal-overlay hidden" id="modalOverlay">
+
+    <div class="modal">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h1>Johnson Saka</h1>
+      <p>A cool dev who loves Alan Walker</p>
+      <p>Stack</p>
+      <ul class="list">
+        <li>**HTML**</li>
+        <li>**CSS**</li>
+        <li>**JavaScript**</li>
+        <li>**Tailwindcss**</li>
+        <li>**React**</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="./modal.js"></script>
+</body>
+</html>
