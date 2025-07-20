@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Modal Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./user.css">
+</head>
+<body>
+ <div class="container">
+    <button id="viewModalKofi" class="btn kofi">View Kofi</button>
+    <button class="btn Ama" id="viewModalAma">View Ama</button>
+    <button class="btn Anna" id="viewModalAnna">View Anna</button>
+ </div>
+
+ <div class="modalOverlay hidden" id="showOverlay">
+    <div id="modal">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="user_profile">
+          <h3 class="person_name"></h3>
+          <p class="person_description"></p>
+        </div>
+    </div>
+ </div>
+  
+<script src="./user.js"></script>
+</body>
+</html>
