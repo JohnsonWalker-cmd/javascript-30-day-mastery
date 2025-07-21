@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Josefin Sans",
+    sans-serif;
+  height: 100vh;
+  background-image: url("./images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  position: relative;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  top: 5rem;
+  left: 30%;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.toggle img{
+  max-width: 100%;
+  object-fit: cover;
+  block-size: auto;
+}
+.logo{
+  letter-spacing: 3px;
+  color: white;
+}
+.new_todo{
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+}
+.just_circle{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.new_todo input{
+  border: none;
+  width: 100%;
+  outline: none;
+}
