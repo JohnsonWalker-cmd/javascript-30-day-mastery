@@ -2,7 +2,9 @@ const newTodo = document.getElementById("add-todo");
 
 const todoList = document.getElementById("todo_list");
 
-// newTodo.value = "Walker" ;
+const listItems = document.getElementById("item_count");
+
+let count = 0;
 
 function addTodo(newtodo){
   const li = document.createElement("li");
@@ -10,6 +12,26 @@ function addTodo(newtodo){
 
   const circle = document.createElement("span");
   circle.classList.add("check-circle");
+
+  circle.style.display = "flex";
+  circle.style.alignItems = "center" ;
+  circle.style.justifyContent = "center";
+
+
+  const check = document.createElement("img");
+  check.src = "./images/icon-check.svg";
+  check.style.display = "none"
+
+  circle.appendChild(check);
+
+  circle.addEventListener("click" , () => {
+    circle.style.background = "linear-gradient(to right ,hsl(192, 100%, 67%), hsl(280, 87%, 65%) )" ;
+
+    check.style.display = "block";
+    taskText.classList.add("done");
+  })
+
+  
 
   const taskText = document.createElement("p");
   taskText.classList.add("task-text");
@@ -19,15 +41,15 @@ function addTodo(newtodo){
   deleteBtn.classList.add("delete-btn")
   deleteBtn.textContent = "✕";
 
-  deleteBtn.addEventListener("click" , ()=>{
-    // li.remove();
-    taskText.classList.toggle("done");
-  });
+  deleteBtn.addEventListener("click", ()=>{
+    li.remove();
+  })
 
   li.appendChild(circle);
   li.appendChild(taskText);
   li.appendChild(deleteBtn);
   todoList.appendChild(li);
+
 }
 
 newTodo.addEventListener("keydown" , (e) => {
@@ -35,9 +57,15 @@ newTodo.addEventListener("keydown" , (e) => {
     const task = newTodo.value.trim();
     if(task !== ""){
       addTodo(task);
+      count++;
+      listItems.textContent = `${count} items left`;
       newTodo.value = "";
     }
     
   }
 })
+
+function markAsCompleted(){
+
+}
 
