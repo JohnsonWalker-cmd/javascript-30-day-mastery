@@ -30,7 +30,10 @@ body{
   justify-content: space-between;
   width: 100%;
 }
-.toggle img{
+.toggle-btn{
+  cursor: pointer;
+}
+.toggle-btn img{
   max-width: 100%;
   object-fit: cover;
   block-size: auto;
@@ -147,4 +150,30 @@ body{
 }
 .clear-completed:hover {
   color: hsl(235, 19%, 35%);
+}
+body.light{
+  background-color: white;
+  color: hsl(236, 9%, 61%);
+}
+body.dark{
+  background-color: hsl(235, 21%, 11%);
+  color:hsl(234, 39%, 85%);
+}
+body.dark input[type="text"]{
+  background-color: hsl(235, 24%, 19%);
+  color: white;
+}
+body.dark .new_todo{
+  background-color: hsl(235, 24%, 19%);
+}
+body.dark .todo-item_container{
+  background-color: hsl(235, 24%, 19%);
+}
+body.dark .check-circle,
+body.dark .just_circle
+{
+  border: 1px solid hsl(234, 39%, 85%);
+}
+body.dark .todo-item{
+  border-bottom: 1px solid hsl(233, 14%, 35%);
 }

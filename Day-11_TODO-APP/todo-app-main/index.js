@@ -4,7 +4,12 @@ const todoList = document.getElementById("todo_list");
 
 const listItems = document.getElementById("item_count");
 
+const toggleBtn = document.querySelector(".toggle-btn");
+
+const themeIcon = document.getElementById("theme-icon");
 let count = 0;
+
+const body = document.body;
 
 function addTodo(newtodo){
   const li = document.createElement("li");
@@ -43,6 +48,7 @@ function addTodo(newtodo){
 
   deleteBtn.addEventListener("click", ()=>{
     li.remove();
+    
   })
 
   li.appendChild(circle);
@@ -58,14 +64,24 @@ newTodo.addEventListener("keydown" , (e) => {
     if(task !== ""){
       addTodo(task);
       count++;
-      listItems.textContent = `${count} items left`;
+      listItems.textContent = `${count} `;
       newTodo.value = "";
     }
     
   }
 })
 
-function markAsCompleted(){
+// Dark and light mode toggle
+toggleBtn.addEventListener("click" , () => {
+  body.classList.toggle("dark");
 
-}
+  if(body.classList.contains("dark")){
+    themeIcon.src = "./images/icon-sun.svg";
+  }else{
+    themeIcon.src = "./images/icon-moon.svg";
+  }
+});
+
+
+
 
