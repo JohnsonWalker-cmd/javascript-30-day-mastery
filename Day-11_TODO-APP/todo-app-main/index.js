@@ -34,6 +34,8 @@ function addTodo(newtodo){
 
     check.style.display = "block";
     taskText.classList.add("done");
+    count--;
+    listItems.textContent = `${count} `
   })
 
   
@@ -48,6 +50,7 @@ function addTodo(newtodo){
 
   deleteBtn.addEventListener("click", ()=>{
     li.remove();
+    
     
   })
 

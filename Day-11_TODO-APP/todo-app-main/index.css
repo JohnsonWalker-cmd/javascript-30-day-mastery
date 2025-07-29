@@ -86,8 +86,8 @@ body{
  
 }*/
 .check-circle{
-  width: 19px;
-  height: 19px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: 1px solid hsl(233, 11%, 84%);
   cursor: pointer;
